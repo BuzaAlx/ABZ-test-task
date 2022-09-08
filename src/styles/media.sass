@@ -1,0 +1,17 @@
+@use "./modules/_variables" as v
+
+@media (min-width: v.$breakpoint-desktop)
+    .preview
+        max-width: 1170px
+        width: 100%
+        margin: 0 auto
+
+@media (max-width: v.$breakpoint-desktop + 180px)
+    .container
+        padding: 0 32px
+
+@media (max-width: v.$breakpoint-tablet)
+    .container
+        padding: 0 16px
+
+

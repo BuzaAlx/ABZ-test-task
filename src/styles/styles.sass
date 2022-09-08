@@ -1,0 +1,23 @@
+@use "./modules/mixins" as  *
+@use "./modules/_variables" as v
+
+@import 'media.sass'
+@import 'fonts.sass'
+@import './modules/reset.sass'
+
+
+html 
+  font-family:'Nunito', sans-serif
+  font-size: v.$pageFontSize
+  background-color: v.$pageBackgroundColor
+
+
+.container 
+  max-width: v.$containerWidth
+  width: 100%
+  margin: 0 auto
+  height: 100%
+
+a
+  text-decoration: none
+  color: v.$linkTextColor
