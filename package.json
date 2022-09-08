@@ -6,9 +6,14 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.2",
+    "react-progressive-graceful-image": "^0.6.14",
     "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.54.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -18,6 +23,9 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "rules": {
+      "no-control-regex": 0
+    },
     "extends": [
       "react-app",
       "react-app/jest"
