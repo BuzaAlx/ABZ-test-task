@@ -1,0 +1,44 @@
+@use "../../../styles/modules/_variables" as v
+    
+.cards > div
+    display: grid
+    grid-template-columns: repeat(3, minmax(100px, 1fr))
+    gap: 29px
+    text-align: center
+    min-height: 537px
+
+.сardList
+    text-align: center
+    & .circle__item 
+        margin: 36px auto 0
+    & .button
+        margin-top: 50px
+
+//react transition group
+.item-enter 
+  opacity: 0
+
+.item-enter-active 
+  opacity: 1
+  transition: opacity 500ms ease-in
+
+.item-exit 
+  opacity: 1
+
+.item-exit-active 
+  opacity: 0
+  transition: opacity 500ms ease-in
+//
+
+@media (max-width: v.$breakpoint-desktop + 180px)
+    .container
+        padding: 0 32px
+
+@media (max-width: 1024px - 50px)
+    .cards > div
+        grid-template-columns: repeat(2, minmax(100px, 1fr))
+        gap: 16px
+
+@media (max-width: 768px - 50px)
+    .cards > div
+        grid-template-columns: 1fr
