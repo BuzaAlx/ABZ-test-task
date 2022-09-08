@@ -1,0 +1,51 @@
+@use "../../../../styles/modules/_variables" as v
+
+$checkbox-width: 20px
+
+input[type="checkbox"] 
+  position: absolute
+  left: -9999px
+
+  & + label 
+    position: relative
+    display: inline-block
+    padding: 6px 10px 6px ($checkbox-width + 10)
+    cursor: pointer
+
+    &:before 
+      display: block
+      content: ""
+      position: absolute
+      left: 0
+      top: 50%
+      margin: (-$checkbox-width/2) 0 0
+      width: $checkbox-width
+      height: $checkbox-width
+      border: 1px solid v.$borderColor
+      border-radius: 50%
+
+
+  &:checked + label 
+    &:before
+        border: 1px solid v.$secondaryColor
+        background-color: v.$secondaryColor
+        background-clip: content-box
+        padding: 4px 
+      
+
+  &:disabled 
+    & + label 
+      cursor: not-allowed
+
+      &:before 
+        background-position: (-$checkbox-width*2) 0
+      
+    &:checked + label 
+      &:before 
+        background-position: (-$checkbox-width*3) 0
+      
+
+.form-checkbox
+  position: relative
+  display: block
+

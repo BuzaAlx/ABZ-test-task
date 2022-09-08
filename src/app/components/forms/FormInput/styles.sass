@@ -1,0 +1,40 @@
+@use "../../../../styles/modules/_variables" as v
+
+.formRow 
+  input,
+  &.checkoutInput select 
+    display: block
+    width: 100%
+    font-size: 16px
+    line-height: 26px
+    padding: 13px 16px
+    border: 1px solid v.$borderColor
+    border-radius: 4px
+    outline: none
+  & .formInput-error
+    border: 2px solid v.$errorInput
+
+  
+.formInput::placeholder
+    color: v.$placeholder
+
+.formRow
+    position: relative
+    & .formRow__label
+        position: absolute
+        left: 16px
+        top: -4px
+        padding: 0 4px
+        color: v.$placeholder
+        background-color: white
+        font-size: 12px
+        line-height: 14px
+    & .formRorw__label-error
+        color: v.$errorInput
+    & small
+        position: absolute
+        bottom:-20px
+        left: 15px
+        font-size: 12px
+        line-height: 14px
+        color: v.$placeholder

@@ -1,0 +1,36 @@
+@use "../../../../styles/modules/_variables" as v
+
+.inputfile-box 
+    position: relative
+    & label
+        display: flex
+
+    .inputfile 
+        display: none
+
+    .container 
+        display: inline-block
+        width: 100%
+
+    .file-box 
+        display: inline-block
+        width: 100%
+        border: 1px solid v.$borderColor
+        color: v.$borderColor
+        padding: 14px 16px
+        box-sizing: border-box
+        line-height: 26px
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+    .file-box--active
+        color: black
+
+    .file-button
+        flex: 0 0 83px
+        padding: 14px 15px
+        border: 1px solid black
+        border-radius: 4px 0px 0px 4px
+        line-height: 26px
+        
+        
