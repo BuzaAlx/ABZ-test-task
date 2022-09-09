@@ -4,13 +4,20 @@ import Button from "../shared/Button";
 import Subtitle from "../shared/Subtitle";
 import Title from "../shared/Title";
 import ProgressiveImage from "react-progressive-graceful-image";
-import imageBig from "../../../assets/pexels-alexandr-podvalny-1227513.jpeg";
-import imageSmall from "../../../assets/pexels-alexandr-podvalny-1227513__mini.jpg";
+import bigSizeImg from "../../../assets/background.jpeg";
+import tabletSizeImg from "../../../assets/background__tablet.jpg";
+import smallSizeImg from "../../../assets/background__mini.jpg";
+import useWindowSize from "../../../hooks";
 
 export default function Welcome() {
+  const { width } = useWindowSize();
+
   return (
     <section className="preview">
-      <ProgressiveImage src={imageBig} placeholder={imageSmall}>
+      <ProgressiveImage
+        src={width > 768 ? bigSizeImg : tabletSizeImg}
+        placeholder={smallSizeImg}
+      >
         {(src, loading) => (
           <img
             className={`image${loading ? " loading" : " loaded"}`}
