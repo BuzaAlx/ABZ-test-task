@@ -12,6 +12,6 @@ export const nav = [
 ];
 
 export const sectionText = [
-  "User successfully registered",
+  "User successfully regis tered Test",
   "Working with POST request",
 ];
